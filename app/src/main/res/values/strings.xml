@@ -17,4 +17,12 @@
     <string name="ice_cream_order_message">You Order a IceCream</string>
     <string name="froyo_order_message">You Order a Froyo</string>
     <string name="order_label_text">Order:</string>
+    <string name="action_contact">Contact</string>
+    <string name="action_order">Order</string>
+    <string name="action_status">Status</string>
+    <string name="action_favourites">Favourites</string>
+    <string name="action_order_message">You selected Order.</string>
+    <string name="action_status_message">You selected Status.</string>
+    <string name="action_favorites_message">You selected Favorites.</string>
+    <string name="action_contact_message">You selected Contact.</string>
 </resources>
