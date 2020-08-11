@@ -25,4 +25,20 @@
     <string name="action_status_message">You selected Status.</string>
     <string name="action_favorites_message">You selected Favorites.</string>
     <string name="action_contact_message">You selected Contact.</string>
+    <string name="Namelabel">Name</string>
+    <string name="NameHint">Enter Your Name</string>
+    <string name="AddLabel">Address</string>
+    <string name="AddHint">Enter Your Address</string>
+    <string name="PhoneNum">Phone</string>
+    <string name="PhoneHint">Enter Your Phone Num</string>
+    <string name="NoteLabel">Note</string>
+    <string name="NoteHint">Write Note If you Want To</string>
+    <string name="DeliveryMEthod">Choose A Delivery Method</string>
+    <string name="Sameday">Same day messenger service</string>
+    <string name="Netday">Next day ground delivery</string>
+    <string name="Pickup">Pick Up</string>
+    <string name="alter_title">Droid Cafe Alert Box</string>
+    <string name="alter_message">Are You Sure You Want To Continue With This Order</string>
+    <string name="ok_button">OK</string>
+    <string name="cancle_button">CANCEL</string>
 </resources>

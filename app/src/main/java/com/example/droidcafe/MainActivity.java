@@ -1,11 +1,12 @@
 package com.example.droidcafe;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -18,7 +19,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE="com.example.droidcafe.extra.MESSAGE";
-    private String mOrderMessage;
+    private String OrderMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(MainActivity.this,OrderActivity.class);
-                i.putExtra(EXTRA_MESSAGE, mOrderMessage);
+                i.putExtra(EXTRA_MESSAGE, OrderMessage);
                 startActivity(i);
             }
         });
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_order:
                 Intent intent = new Intent(MainActivity.this, OrderActivity.class);
-                intent.putExtra(EXTRA_MESSAGE, mOrderMessage);
+                intent.putExtra(EXTRA_MESSAGE, OrderMessage);
                 startActivity(intent);
                 return true;
             case R.id.action_status:
@@ -76,17 +77,77 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showDonutOrder(View view) {
-        mOrderMessage=getString(R.string.donut_order_message);
-        displayToast(mOrderMessage);
+        OrderMessage=getString(R.string.donut_order_message);
+        displayToast(OrderMessage);
+        AlertDialog.Builder myAlertBuilder = new
+                AlertDialog.Builder(MainActivity.this);
+        myAlertBuilder.setTitle(R.string.alter_title);
+        myAlertBuilder.setMessage(R.string.alter_message);
+        myAlertBuilder.setPositiveButton(R.string.ok_button,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent i=new Intent(MainActivity.this,OrderActivity.class);
+                        i.putExtra(EXTRA_MESSAGE, OrderMessage);
+                        startActivity(i);
+                    }
+                });
+
+        myAlertBuilder.setNegativeButton(R.string.cancle_button,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                });
+        myAlertBuilder.show();
     }
 
     public void showIceCreamOrder(View view) {
-        mOrderMessage = getString(R.string.ice_cream_order_message);
-        displayToast(mOrderMessage);
+        OrderMessage = getString(R.string.ice_cream_order_message);
+        displayToast(OrderMessage);
+        AlertDialog.Builder myAlertBuilder = new
+                AlertDialog.Builder(MainActivity.this);
+        myAlertBuilder.setTitle(R.string.alter_title);
+        myAlertBuilder.setMessage(R.string.alter_message);
+        myAlertBuilder.setPositiveButton(R.string.ok_button,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent i=new Intent(MainActivity.this,OrderActivity.class);
+                        i.putExtra(EXTRA_MESSAGE, OrderMessage);
+                        startActivity(i);
+                    }
+                });
+
+        myAlertBuilder.setNegativeButton(R.string.cancle_button,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                });
+        myAlertBuilder.show();
     }
 
     public void showFroyoOrder(View view) {
-        mOrderMessage = getString(R.string.froyo_order_message);
-        displayToast(mOrderMessage);
+        OrderMessage = getString(R.string.froyo_order_message);
+        displayToast(OrderMessage);
+        AlertDialog.Builder myAlertBuilder = new
+                AlertDialog.Builder(MainActivity.this);
+        myAlertBuilder.setTitle(R.string.alter_title);
+        myAlertBuilder.setMessage(R.string.alter_message);
+        myAlertBuilder.setPositiveButton(R.string.ok_button,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent i=new Intent(MainActivity.this,OrderActivity.class);
+                        i.putExtra(EXTRA_MESSAGE, OrderMessage);
+                        startActivity(i);
+                    }
+                });
+
+        myAlertBuilder.setNegativeButton(R.string.cancle_button,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                });
+        myAlertBuilder.show();
     }
 }
